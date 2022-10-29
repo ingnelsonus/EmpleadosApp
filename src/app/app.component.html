@@ -24,17 +24,11 @@
   <div class="col">
     <button type="submit" class="btn btn-primary" (click)="saveEmployed()">Guardar</button>
   </div>
-
-
   </form>
   <br>
   <br>
+
   <h1>Listado de empleados</h1>
-  <div class="row">
-    <div class="col">
-      <div *ngFor="let item of empleados;let i=index">
-       {{i+1}}. {{item.nombre}} {{item.apellido}} {{item.cargo}} {{item.salario}}
-      </div>
-    </div>
-  </div>
+  <app-empleado-hijo *ngFor="let item of empleados;let i=index" [EmpItem]="item" [index]="i"></app-empleado-hijo>
+
 </div>
