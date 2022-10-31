@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgModule } from '@angular/core';
 import { Empleado } from './empleado.model';
 import { ServicioEmpleadoService } from './servicio-empleado.service';
 
@@ -18,7 +18,20 @@ export class EmpleadodataService {
   addEmployed(newEmpleado:Empleado){
     this.empleados.push(newEmpleado);
     this.empservice.mostrarMensaje("Se agrego el empleado:"+newEmpleado.nombre+" "+newEmpleado.apellido);
+  }
 
+  updateEmployed(index:number,newEmpleado:Empleado){
+    let empleadoToUpdate=this.empleados[index];
+    empleadoToUpdate.nombre=newEmpleado.nombre;
+    empleadoToUpdate.apellido=newEmpleado.apellido;
+    empleadoToUpdate.cargo=newEmpleado.cargo;
+    empleadoToUpdate.salario=newEmpleado.salario;
+    this.empservice.mostrarMensaje("Se actualizo el empleado:"+newEmpleado.nombre+" "+newEmpleado.apellido);
+  }
+
+  findEmploye(index:number){
+    let empleado:Empleado=this.empleados[index];
+    return empleado;
   }
 
 }

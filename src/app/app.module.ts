@@ -12,12 +12,14 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { QuienesComponent } from './quienes/quienes.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { RouterModule, Routes } from '@angular/router';
+import { UpdateEmpComponent } from './update-emp/update-emp.component';
 
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
   {path:'proyectos',component:ProyectosComponent},
   {path:'quienes',component:QuienesComponent},
-  {path:'contacto',component:ContactoComponent}
+  {path:'contacto',component:ContactoComponent},
+  {path:'updateEmp/:id',component:UpdateEmpComponent}
 ];
 
 @NgModule({
@@ -28,7 +30,8 @@ const appRoutes:Routes=[
     HomeComponent,
     ProyectosComponent,
     QuienesComponent,
-    ContactoComponent
+    ContactoComponent,
+    UpdateEmpComponent
   ],
   imports: [
     BrowserModule,

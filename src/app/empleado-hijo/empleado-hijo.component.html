@@ -1,7 +1,9 @@
 <div class="row">
   <div class="col">
     <div>
+      <a [routerLink]="['/updateEmp',index]">
      {{index+1}}. {{EmpItem.nombre}} {{EmpItem.apellido}} {{EmpItem.cargo}} {{EmpItem.salario}}
+    </a>
     </div>
     <app-caracteristicas-empleado (caracteristicasEmpleados)="addCaracteristica($event)"></app-caracteristicas-empleado>
     <ul>
