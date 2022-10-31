@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
 
   saveEmployed():void{
     let newEmpleado =new Empleado(this.nombre,this.apellido,this.cargo,this.salario);
-    this.empservice.mostrarMensaje("Nombre del empleado: "+this.nombre+" "+this.apellido);
+    //this.empservice.mostrarMensaje("Nombre del empleado: "+this.nombre+" "+this.apellido);
     this.empDataService.addEmployed(newEmpleado);
     this.nombre="";
     this.apellido="";
