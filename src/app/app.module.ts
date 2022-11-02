@@ -13,13 +13,15 @@ import { QuienesComponent } from './quienes/quienes.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { RouterModule, Routes } from '@angular/router';
 import { UpdateEmpComponent } from './update-emp/update-emp.component';
+import { ErrorComponent } from './error/error.component';
 
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
   {path:'proyectos',component:ProyectosComponent},
   {path:'quienes',component:QuienesComponent},
   {path:'contacto',component:ContactoComponent},
-  {path:'updateEmp/:id',component:UpdateEmpComponent}
+  {path:'updateEmp/:id',component:UpdateEmpComponent},
+  {path:'**',component:ErrorComponent}
 ];
 
 @NgModule({
@@ -31,7 +33,8 @@ const appRoutes:Routes=[
     ProyectosComponent,
     QuienesComponent,
     ContactoComponent,
-    UpdateEmpComponent
+    UpdateEmpComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
